@@ -36,56 +36,7 @@ server
   app.use(express.urlencoded( {extended: true }));
   app.use(express.json());
 
-  app.use("/api/v1", router);
-
-
-  // const igReelurl = "https://instagram.fblr5-1.fna.fbcdn.net/v/t50.2886-16/10000000_400447348856614_9136334212308696856_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjEwODAuY2xpcHMuaGlnaCIsInFlX2dyb3VwcyI6IltcImlnX3dlYl9kZWxpdmVyeV92dHNfb3RmXCJdIn0&_nc_ht=instagram.fblr5-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=8rvZhMkUyXIAX-E7Jyg&edm=APfKNqwBAAAA&vs=469505978358278_3284582381&_nc_vs=HBksFQAYJEdJQ1dtQUFtMS1wcE5Hd0JBQmgtNkVtUHg4cF9icV9FQUFBRhUAAsgBABUAGCRHRm1ENEJITzdWNFNzRTRDQU1BTnA5b045U0o4YnFfRUFBQUYVAgLIAQAoABgAGwAVAAAmyI2Q5%2Brt4z8VAigCQzMsF0A3u6XjU%2FfPGBJkYXNoX2hpZ2hfMTA4MHBfdjERAHX%2BBwA%3D&_nc_rid=cfa0609add&ccb=7-5&oe=634A1C7A&oh=00_AT-T0H8N-JSkd7YLgJbRyHRGsTQR_wEyySSC_70gFBCgog&_nc_sid=74f7ba"
-
-
-  // "https://scontent.cdninstagram.com/v/t50.2886-16/10000000_400447348856614_9136334212308696856_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjEwODAuY2xpcHMuaGlnaCIsInFlX2dyb3VwcyI6IltcImlnX3dlYl9kZWxpdmVyeV92dHNfb3RmXCJdIn0&_nc_ht=instagram.fblr5-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=8rvZhMkUyXIAX-E7Jyg&edm=APfKNqwBAAAA&vs=469505978358278_3284582381&_nc_vs=HBksFQAYJEdJQ1dtQUFtMS1wcE5Hd0JBQmgtNkVtUHg4cF9icV9FQUFBRhUAAsgBABUAGCRHRm1ENEJITzdWNFNzRTRDQU1BTnA5b045U0o4YnFfRUFBQUYVAgLIAQAoABgAGwAVAAAmyI2Q5%2Brt4z8VAigCQzMsF0A3u6XjU%2FfPGBJkYXNoX2hpZ2hfMTA4MHBfdjERAHX%2BBwA%3D&_nc_rid=cfa0609add&ccb=7-5&oe=634A1C7A&oh=00_AT-T0H8N-JSkd7YLgJbRyHRGsTQR_wEyySSC_70gFBCgog&_nc_sid=74f7ba";
-
-  // download the video from URL
-
-//   https.get(igReelurl, (res) => {
-//     const filePath = ufileName("/", "igreel");
-
-//     const Str = filePath
-
-//     // removing character 'o'
-
-//     var igReelPath = Str.slice(1) + ".mp4"
-
-//     console.log(igReelPath);
-
-//     const writeStream = fs.createWriteStream(igReelPath);
- 
-//     res.pipe(writeStream);
- 
-//     writeStream.on("finish", () => {
-//        writeStream.close();
-//        console.log("Download Completed!");
-//     })
-
-//     // take a screenshort of the downloded video 
-
-//     new ffmpeg(igReelurl).takeScreenshots({
-//       filename: filePath,
-//       count: 1,
-//       timemarks: ["1"],
-//       size: "320x?"
-//       });
-//  })
-
-    // const filePath = "igreel-9002269e.png"
- 
-    // const fileExist = fs.existsSync(filePath)
-
-    // if (!fileExist) { 
-    //     console.log('File does not exist') 
-    // } else {
-    //     console.log('File exists') 
-    // }
-
+  app.use("/new/v1", router);
 
   app.all('*', (req, res) => {
     return handle(req, res)

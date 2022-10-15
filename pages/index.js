@@ -73,7 +73,7 @@ const handleDownload = (e)=>{
     console.log("handleSubmit got clicked");
     console.log(url);
 
-    const res = await fetch(`http://localhost:3000/api/v1/ig-reel-url`, {
+    const res = await fetch(`https://igreel.com/new/v1/ig-reel-url`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -96,7 +96,7 @@ const handleDownload = (e)=>{
     console.log(serverthumbnailName, "serverthumbnailName");
     setCdnMediaLink(severVideoLink)
 
-      const res2 = await fetch(`http://localhost:3000/api/v1/make-ig-reel`, {
+      const res2 = await fetch(`https://igreel.com/new/v1/make-ig-reel`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

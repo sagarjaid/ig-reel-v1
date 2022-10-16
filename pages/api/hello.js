@@ -11,7 +11,7 @@ export default async function handler (req, res){
   const ig = new igApi(session_id);
 
   console.log(req.body.url);
-  const videoUrl =  req.body.url
+  const videoUrl =  req.body.url || "https://www.instagram.com/reel/Ci8N8rEDQvL/"
 
     // const videoUrl = "https://www.instagram.com/reel/Ci8N8rEDQvL/"
     

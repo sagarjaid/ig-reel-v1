@@ -64,3 +64,5 @@ server
   });
 
 });
+
+module.exports = server;

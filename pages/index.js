@@ -73,7 +73,7 @@ const handleDownload = (e)=>{
     console.log("handleSubmit got clicked");
     console.log(url);
 
-    const res = await fetch(`/new/v1/ig-reel-url`, {
+    const res = await fetch(`https://courageous-rabanadas-0d979e.netlify.app/api/hello`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

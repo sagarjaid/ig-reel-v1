@@ -10,15 +10,17 @@ export default async function handler (req, res){
 
   const ig = new igApi(session_id);
 
-  console.log(req.body.url);
-  const videoUrl =  req.body.url || "https://www.instagram.com/reel/Ci8N8rEDQvL/"
+  const body = JSON.parse(req.body)
 
-    // const videoUrl = "https://www.instagram.com/reel/Ci8N8rEDQvL/"
+  console.log(body.url);
+  // const videoUrl =  req.body.url || "https://www.instagram.com/reel/Ci8N8rEDQvL/"
+
+    const videoUrl = "https://www.instagram.com/reel/Ci8N8rEDQvL/"
     
     const igVideoData = await ig.fetchPost(videoUrl)
 
     const igVideoUrl = igVideoData.links[0].url
     
     console.log(igVideoUrl, "igVideoUrl");
-    res.status(200).json(igVideoUrl)
+    res.status(200).json({igVideoUrl: igVideoUrl})
 }
